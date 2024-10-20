@@ -61,13 +61,13 @@ public class PRINCIPAL {
     }
 
 
-
     // ESTE SEGMENTO IMPRIME TODO EL HISTORIAL DE CONVERSIONES REALIZADAS HASTA EL MOMENTO,
     public static void IMPRIMIRHISTORIAL(List<CONVERSOR> HISTORIAL) {
         System.out.println("\n**************************************************** HISTORIAL *******************************************************");
         HISTORIAL.forEach(System.out::print);
         System.out.println("************************************************************************************************************************\n");
     }
+
     //ESTE SEGMENTO GESTIONA LAS  OPCINES DEL MENU DEL CONVERSOR DE MONEDAS, LLAMANDO A FUNCIONES
     // ESPECIFICAS PARA REALIZAR CONVERSIONES.
     public static boolean CONVERTIRMONEDAS(Scanner entrada, List<CONVERSOR> HISTORIAL, CONSULTA cambiar_) {
@@ -94,11 +94,26 @@ public class PRINCIPAL {
 
         return MENU;
     }
+
     // ESTE SEGMENTO GESTIONA LA CONVERSION DE UNA MONEDA A OTRA
     private static void MANEJARCONVERSION(Scanner entrada, List<CONVERSOR> HISTORIAL,
                                           CONSULTA cambiar_, String moneda1, String moneda2) {
-        System.out.print("\nINGRESA EL VALOR QUE DESEAS CONVERTIR: ");
-        double valor = entrada.nextDouble();
+        double valor = 0;
+        boolean valorValido = false;
+
+        // BUCLE QUE PIDE AL USUARIO QUE INGRESE UN VALOR HASTA QUE LO HAGA CORRECTAMENTE
+        while (!valorValido) {
+            try {
+                System.out.print("\nINGRESA EL VALOR QUE DESEAS CONVERTIR: ");
+                valor = entrada.nextDouble();
+                valorValido = true; // VALOR VALIDO, SALIR DEL BUCLE
+            } catch (InputMismatchException e) {
+                System.out.println("ERROR: DEBES INGRESAR NUMEROS NO PUEDES INGRESAR LETRAS. " +
+                        "Intenta nuevamente.");
+                entrada.next(); // LIMPIAR BUFFER
+            }
+        }
+
         System.out.println();
         IMPRIMIRCONVERSORYGUARDAR(HISTORIAL, cambiar_, moneda1, moneda2, valor);
     }
