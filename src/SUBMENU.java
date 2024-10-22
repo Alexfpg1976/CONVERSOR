@@ -30,11 +30,15 @@ public class SUBMENU {
                 switch (opcion) {
                     case 1 -> MANEJARCONVERSION("USD", "ARS");
                     case 2 -> MANEJARCONVERSION("ARS", "USD");
-                    case 3 -> MANEJARCONVERSION("USD", "BRL");
-                    case 4 -> MANEJARCONVERSION("BRL", "USD");
-                    case 5 -> MANEJARCONVERSION("USD", "COP");
-                    case 6 -> MANEJARCONVERSION("COP", "USD");
-                    case 7 -> volverMenu = true; // Regresar al menú principal
+                    case 3 -> MANEJARCONVERSION("USD", "EUR");
+                    case 4 -> MANEJARCONVERSION("EUR", "USD");
+                    case 5 -> MANEJARCONVERSION("USD", "BRL");
+                    case 6 -> MANEJARCONVERSION("BRL", "USD");
+                    case 7 -> MANEJARCONVERSION("USD", "COP");
+                    case 8 -> MANEJARCONVERSION("COP", "USD");
+                    case 9 -> MANEJARCONVERSION("USD", "GBP");
+                    case 10 -> MANEJARCONVERSION("GBP", "USD");
+                    case 11 -> volverMenu = true; // Regresar al menú principal
                     default -> System.out.println("OPCION NO VALIDA!\n");
                 }
             } catch (InputMismatchException e) {
@@ -50,13 +54,17 @@ public class SUBMENU {
         System.out.println("""
                 ******************* SUBMENU *********************
                 
-                1 - DOLAR - A - PESO ARGENTINO
-                2 - PESO ARGENTINO - A - DOLAR
-                3 - DOLAR - A - REAL BRASILEÑO
-                4 - REAL BRASILEÑO - A - DOLAR
-                5 - DOLAR - A - PESO COLOMBIANO
-                6 - PESO COLOMBIANO - A - DOLAR
-                7 - VOLVER AL MENU PRINCIPAL
+                1 -  DOLAR - A - PESO ARGENTINO
+                2 -  PESO ARGENTINO - A - DOLAR
+                3 -  DOLAR    -   A    -   EURO
+                4 -  EURO    -   A    -   DOLAR
+                5 -  DOLAR - A - REAL BRASILEÑO
+                6 -  REAL BRASILEÑO - A - DOLAR
+                7 -  DOLAR - A - PESO COLOMBIANO
+                8 -  PESO COLOMBIANO - A - DOLAR
+                9 -  DOLAR - A - LIBRA ESTERLINA
+                10 - LIBRA ESTERLINA - A - DOLAR
+                11 - VOLVER AL MENU PRINCIPAL
                 
                 ELIJA UNA OPCION VALIDA
                 
