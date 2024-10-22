@@ -70,8 +70,8 @@ public class SUBMENU {
         //BUCLE QUE ASEGURA QUE EL VALOR INGRESADO SEA VALIDO
         while (!valorValido) {
             try {
-                System.out.print("\nINGRESA EL VALOR QUE DESEAS CONVERTIR: ");
-                valor = entrada.nextDouble();
+                System.out.print("\nINGRESA EL VALOR QUE DESEAS CONVERTIR (" + moneda1 + " a " + moneda2 + "): ");
+                valor = entrada.nextDouble(); // lEE EL VALOR DE LA CONVERSION
                 valorValido = true; // VALOR PARA SALIR DEL BUCLE
             } catch (InputMismatchException e) {
                 System.out.println("ERROR: DEBES INGRESAR NUMEROS NO LETRAS. INTENTA NUEVAMENTE.");
