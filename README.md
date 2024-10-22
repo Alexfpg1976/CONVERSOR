@@ -15,7 +15,7 @@ ELIJA UNA OPCION VALIDA
  
 *********************************************
 
-Y un Submenu que contiene 7 opciones con posiblilidad de regresar al menu principal, donde tambien se validan los campos  y posibles digitaciones erroneas del usuario, 
+Y un Submenu que contiene 11 opciones con posiblilidad de regresar al menu principal, donde tambien se validan los campos  y posibles digitaciones erroneas del usuario, 
 teniendo en cuenta que el programa intenta guiar al usuario, en todo su recorrido.
 
 ******************* SUBMENU *********************
