@@ -61,9 +61,16 @@ public class PRINCIPAL {
 
     // METODO PARA IMPRIMIR EL HISTORIAL DE CONVERSIONES
     public static void IMPRIMIRHISTORIAL(List<CONVERSOR> HISTORIAL) {
-        System.out.println("\n**************************************************** HISTORIAL *******************************************************");
-        HISTORIAL.forEach(System.out::print);
-        System.out.println("************************************************************************************************************************\n");
+        // VERIFICA SI EL HISTORIAL TIENE DATOS
+        if (HISTORIAL.isEmpty()) {
+            // Si está vacío, mostrar este mensaje al usuario
+            System.out.println("\nAÚN NO SE HAN REALIZADO REGISTROS DE CONVERSIONES.\n");
+        } else {
+            // SI HAY DATOS, IMPRIMIMIMOS EL HISTORIAL
+            System.out.println("\n**************************************************** HISTORIAL *******************************************************");
+            HISTORIAL.forEach(System.out::print); // IMPRIME CADA CONVERSION
+            System.out.println("************************************************************************************************************************\n");
+        }
     }
 }
 
